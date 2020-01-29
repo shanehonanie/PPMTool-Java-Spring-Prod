@@ -41,6 +41,10 @@ public class ProjectService {
             project.setUser(user);
             project.setProjectLeader(user.getUsername());
             project.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());
+            project.setStart_date(project.getStart_date());
+            project.setEnd_date(project.getEnd_date());
+            System.out.println("start " + project.getStart_date());
+            System.out.println("end " + project.getEnd_date());
 
             if(project.getId() == null) {
                 Backlog backlog = new Backlog();
